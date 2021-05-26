@@ -22,6 +22,10 @@ Patent IPC class prediction and analysis
 	```
 	cd patent-classification/
 	```
+1. Run the librAIry platform (the first time it may take a few minutes to download the Docker images)
+    ````
+    docker-compose up -d
+    ````  
 1. Create a virtual environment
     ```
     python -m venv custom-env
@@ -34,14 +38,6 @@ Patent IPC class prediction and analysis
     ```
     pip install -r requirements.txt
     ```
-4. Run the librAIry platform 
-    ````
-    docker-compose up -d
-    ````  
-1. Wait for all services to be available (e.g. `Started Application in xx.xx seconds`). The first time it may take a few minutes to download the Docker images.
-    ```
-    docker-compose logs -f
-	```
 1. Download [XML patents](https://bulkdata.uspto.gov/data/patent/grant/redbook/fulltext/2021/) (Patent Application Full Text Data (No Images)): 
     ````
     wget 'https://bulkdata.uspto.gov/data/patent/grant/redbook/fulltext/2021/ipg210105.zip'
