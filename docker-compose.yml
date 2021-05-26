@@ -1,0 +1,37 @@
+version: '3'
+services:
+  repo:
+    image: librairy/repo:latest
+    container_name: librairy-repo
+    ports: [8983:8983]
+    networks:
+      - net
+  nlp:
+    image: librairy/nlp:latest
+    container_name: nlp
+    ports: [8082:80]
+    environment:
+     - REST_PATH=/parse
+     - REST_PORT=80
+    networks:
+      - net
+  api:
+    image: librairy/api:latest
+    container_name: librairy-api
+    ports: [8081:7777]
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - NLP_ENDPOINT=http://nlp/parse
+      - LIBRAIRY_API_USERS=basf:2021
+    networks:
+      - net
+  explorer:
+    image: librairy/explorer:latest
+    container_name: librairy-explorer
+    ports: [8080:80]
+    networks:
+      - net
+networks:
+  net:
+    driver: bridge
