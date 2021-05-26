@@ -56,7 +56,7 @@ Patent IPC class prediction and analysis
     ```  
 1. Deploy the model as a web service
     ```
-    docker run -p 8585:7777 --name model -e NLP_ENDPOINT=http://nlp/parse --network patents_net cbadenes/uspto-ipc-sections:latest
+    docker run -p 8585:7777 --name model -e NLP_ENDPOINT=http://nlp/parse --network patent-classification_net cbadenes/uspto-ipc-sections:latest
     ```  
 1. REST web api is available at: http://localhost:8585
 
@@ -69,7 +69,7 @@ Patent IPC class prediction and analysis
 |    [/dashboard](http://localhost:8983/solr/banana/#/dashboard)          |    Banana dashboard                                         |
 |    [/api](http://localhost:8081)                              		  |    librAIry API (credentials in `docker-compose.yml` file)  |
 |    [/explorer](http://localhost:8080)                              	  |    librAIry Browser                                         |
-|    [/model](http://localhost:8082/kg-api/award)                         |    International Patent Classification codes as Topic Model |
+|    [/model](http://localhost:8585)                                      |    International Patent Classification codes as Topic Model |
 
 ## Evaluation
 
