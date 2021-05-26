@@ -32,7 +32,7 @@ Patent IPC class prediction and analysis
     ```
 1. Install dependencies
     ```
-    python -m pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 4. Run the librAIry platform 
     ````
