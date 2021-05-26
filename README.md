@@ -62,8 +62,6 @@ Patent IPC class prediction and analysis
 
 ## Local Resources
 
-A [yasgui-based interface](http://localhost:3040) and a REST API based on [R4R](https://github.com/cbadenes/r4r) are available:
-
 |               service                                                   |            description                                      |
 |-------------------------------------------------------------------------|-------------------------------------------------------------|
 |    [/nlp](http://localhost:8082/parse)                  				  |    NLP Tasks                                                |
